@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Magazin virtual</title>
+        <meta charset="UTF-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="magazinVirtual.css">
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster|Work+Sans&display=swap" rel="stylesheet">
+        <script src="cart.js"></script>
+    </head>
+    
+    <body onload="getCart();">
+        <div class="detailWraper">
+                <div class="container">
+                    <h1>Paint Place</h1>
+                    <div class="icons">
+                        <a href="magazinVirtual.html"><img src="home.svg" class="icon icon-home"></a>
+                        <a href="admin.html"><img src="admin.png" class="icon icon-admin"></a>
+                    </div>
+                </div>
+                <div id="spinner"><img src="spinner.gif"></div> 
+                <div class="cartContent">
+                    <div class="cartWrap" class="hidden">
+                        
+                    </div>
+                    <div class="finalCart">
+                        <p>Numar produse achizitionate: <span id="prodAchizitionate"></span></p>
+                        <p>Total: <span id="sumaTotal"></span></p>
+                        <div class="cumparaWrap"><button class="cumpara" onclick="cumpara();">Cumpara</button></div>        
+                    </div>
+                </div>
+                <footer>
+                        <div class="social">
+                            <img src="facebook.svg" class="socialIcon">
+                            <img src="instagram.svg" class="socialIcon">
+                            <img src="twitter.svg" class="socialIcon">
+                        </div>
+                </footer>
+        </div>
+	</body>
+</html>

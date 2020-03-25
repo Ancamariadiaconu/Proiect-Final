@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Adauga un produs nou</title>
+		<meta charset="UTF-8">
+        <link rel="stylesheet" href="magazinVirtual.css">
+        <script src="adaugaProdus.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Srisakdi&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+		
+    </head>
+    <body>
+        <div class="adaugaProdusWrapper">
+            <div class="container">
+                <h1>Paint Place</h1>
+                <div class="icons">
+                    <a href="magazinVirtual.html"><img src="home.svg" class="icon icon-home"></a>
+                    <a href="admin.html"><img src="admin.png" class="icon icon-admin"></a>
+                </div>
+            </div>
+            <div class="adaugareProdusNou">
+                <div class="containerAdaugare">
+                    <form class="informatiiNoi" onsubmit="adaugaProdusNou(event);">
+                        <label for="Nume" class="addProdus">Nume</label>
+                        <input type="text"  name="nume" class="addProdusInput"/><br>
+                        <label for="url" class="addProdus">URl imagine</label>
+                        <input type="text" name="url" class="addProdusInput"/><br>
+                        <label for="descriere" class="addProdus">Descriere</label>
+                        <input type="text" name="descriere" class="addProdusInput"/><br>
+                        <label for="pret" class="addProdus">Pret</label>
+                        <input type="text" name="pret" class="addProdusInput"/><br>
+                        <label for="stoc" class="addProdus">Stoc</label>
+                        <input type="text" name="stoc" class="addProdusInput"/><br>
+                        <button type="submit" class="adaugare">Adauga Produs</button>
+                    </form>
+                </div>
+            <footer>
+                <div class="social">
+                    <img src="facebook.svg" class="socialIcon">
+                    <img src="instagram.svg" class="socialIcon">
+                    <img src="twitter.svg" class="socialIcon">
+                </div>
+        </footer>
+        </div>
+	</body>
+</html>
