@@ -29,19 +29,19 @@ function drawDetails(){
         `
         document.querySelector(".productDetailsWrap").innerHTML=detailsStr;   
 }
-    //  function drawCarousel(){
-    //     let carouselStr="";
-    //     for(let i in detailList){
-    //      carouselStr+=`
-    //      <img src="${detailList[i].imagine}" />
+     function drawCarousel(){
+        let carouselStr="";
+        for(let i in detailList){
+         carouselStr+=`
+         <img src="${detailList[i].imagine}" />
         
-    //     `
-    //     }
-    //     document.querySelector(".carousel").innerHTML = carouselStr;
-    //     new Flickity( '.carousel', {
-    //         autoPlay:true
-    //     });
-    //  }
+        `
+        }
+        document.querySelector(".carousel").innerHTML = carouselStr;
+        new Flickity( '.carousel', {
+            autoPlay:true
+        });
+     }
 
 
  function addToCart(){
