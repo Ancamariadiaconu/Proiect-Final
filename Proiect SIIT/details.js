@@ -6,7 +6,8 @@ async function getProductDetails(){
     let response = await fetch("https://final-project-corect.firebaseio.com/.json");
     detailList = await response.json();
     drawDetails();
-    //drawCarousel();
+    drawCarousel();
+    setCarousel();
 }
 function drawDetails(){
     document.querySelector(".productDetailsWrap").classList.remove("hidden");
@@ -33,14 +34,15 @@ function drawDetails(){
         let carouselStr="";
         for(let i in detailList){
          carouselStr+=`
-         <img src="${detailList[i].imagine}" />
+         <div class="carousel-cell">
+            <img src="${detailList[i].imagine}"/>
+         </div>
         
         `
         }
         document.querySelector(".carousel").innerHTML = carouselStr;
-        new Flickity( '.carousel', {
-            autoPlay:true
-        });
+        
+        
      }
 
 
@@ -108,4 +110,29 @@ function drawDetails(){
             }       
         }        
 }
+function setCarousel(){
+    let carouselContainer = $(".owl-carousel");
+    carouselContainer.owlCarousel({
+        responsive:{
+            0:{
+                items:1
+
+            }
+
+        },
+        autoplay: true,
+        loop: true
+        
+
+    });
+
+    $(".leftButton").on("click", function (){
+        carouselContainer.trigger("prev.owl.carousel")
+    });
+    
+    $(".rightButton").on("click", function (){
+        carouselContainer.trigger("next.owl.carousel")
+    });
+}
+
 

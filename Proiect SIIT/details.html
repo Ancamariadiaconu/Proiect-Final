@@ -4,16 +4,19 @@
 		<title>Magazin virtual</title>
         <meta charset="UTF-8">
         <meta name=viewport content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="owl.carousel.min.css">
+        <link rel="stylesheet" href="owl.theme.default.css">
         <link rel="stylesheet" href="magazinVirtual.css">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster|Work+Sans&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="flickity.css" media="screen">
-        <script src="details.js" defer></script>
-        <script src="flickity.pkgd.min.js"></script>
+        <script src="jQuery.js"></script>
+        <script src="https://kit.fontawesome.com/c73d4da8d5.js" crossorigin="anonymous" defer></script>
+        <script src="owl.carousel.min.js" defer></script>
+        <script src="details.js" defer></script>    
     </head>
     
     <body onload="getProductDetails();">
         <div class="detailWraper">
-                <div class="container">
+                <div class="container navContainer">
                     <h1>Paint Place</h1>
                     <nav class="icons">
                          <a href="magazinVirtual.html"><img src="home.svg" class="icon icon-home"></a>
@@ -22,10 +25,20 @@
                     </nav>
                 </div>
                 <div class="detailsContainer">
-                    <div id="spinner"><img src="spinner.gif"></div> 
-                    <div class="productDetailsWrap" hidden></div>
-                    <div class="carousel"></div>
-                    
+                    <div id="spinner"><img src="spinner.gif"></div>
+                    <div class="detailsContainerContent">
+                        <div class="productDetailsWrap" hidden></div>
+                        <div class="carouselWrap">
+                            <div class="carousel owl-carousel"></div>
+                            <div class="carouselButtons">
+                                <span class="leftButton"><i class="fas fa-chevron-left"></i></span>
+                                <span class="rightButton"><i class="fas fa-chevron-right"></i></span>
+                                
+                            </div>
+                        </div>
+                    </div> 
+                        
+                    </div>   
                 </div>
                 <footer>
                         <div class="social">

@@ -15,12 +15,12 @@ function draw(){
           }
               
           str+=`<div class="itemAdmin">
-          <div class="stergereProdus hidden" id="formular${i}">
-              <p class="mesaj">Esti pe cale sa stergi produsul:"<span id="numeProdus${i}"></span>"</p>
-              <p class="mesaj">Confirmi stergerea?</p>
-              <button type="submit" class="confirmare" onclick="confirmareStergere(event);" id="${i}">Da</button>
-              <button type="submit" class="refuz" onclick="refuzStergere(event);" id="${i}">Nu</button>          
-          </div>
+                    <div class="stergereProdus hidden" id="formular${i}">
+                    <p class="mesaj">Esti pe cale sa stergi produsul:"<span id="numeProdus${i}"></span>"</p>
+                    <p class="mesaj">Confirmi stergerea?</p>
+                    <button type="submit" class="confirmare" onclick="confirmareStergere(event);" id="${i}">Da</button>
+                    <button type="submit" class="refuz" onclick="refuzStergere(event);" id="${i}">Nu</button>          
+                </div>
           <div class="imagineAdmin">
               <img src="${adminList[i].imagine}" class="imgAdmin"/>
           </div>
@@ -54,9 +54,7 @@ function showDiv(event){
     nameToDisplay.textContent=adminList[itemId].nume;
     let removePop = document.getElementById(`formular${itemId}`);
     removePop.classList.remove("hidden");
-    removePop.classList.add("focusDiv");
-    let pageContent = document.querySelector(".adminWraper");
-    pageContent.classList.add("removeFocus");
+    
 }
 async function confirmareStergere(event){
  let itemConfirmed= event.target;
