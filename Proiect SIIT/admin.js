@@ -15,32 +15,33 @@ function draw(){
           }
               
           str+=`<div class="itemAdmin">
-                    <div class="stergereProdus hidden" id="formular${i}">
-                    <p class="mesaj">Esti pe cale sa stergi produsul:"<span id="numeProdus${i}"></span>"</p>
-                    <p class="mesaj">Confirmi stergerea?</p>
-                    <button type="submit" class="confirmare" onclick="confirmareStergere(event);" id="${i}">Da</button>
-                    <button type="submit" class="refuz" onclick="refuzStergere(event);" id="${i}">Nu</button>          
-                </div>
-          <div class="imagineAdmin">
-              <img src="${adminList[i].imagine}" class="imgAdmin"/>
-          </div>
-          <div class="numeAdmin">
-               <a><span>${adminList[i].nume}</span></a>
-          </div>
-          <div class="pretAdmin">
-              <span>${adminList[i].pret}</span>
-          </div>
-          <div class="stocAdmin">
-              <span>${adminList[i].stoc}</span>
-          </div>
-          <div class="removeAdmin">
-              <button onclick="showDiv(event)"; id="${i}">Remove</button>
-          </div>
-          <div class="editAdmin">
-              <a href="edit.html?id=${i}"><button>Edit</button></a>
-          </div>
-
-  </div>     
+                    <div id="dialogBox" class="hidden">
+                        <div class="stergereProdus" id="formular${i}">
+                            <p class="mesaj">Esti pe cale sa stergi produsul:"<span id="numeProdus${i}"></span>"</p>
+                            <p class="mesaj">Confirmi stergerea?</p>
+                            <button type="submit" class="confirmare" onclick="confirmareStergere(event);" id="${i}">DA</button>
+                            <button type="submit" class="refuz" onclick="refuzStergere(event);">NU</button>          
+                        </div>
+                    </div>
+                    <div class="imagineAdmin">
+                        <img src="${adminList[i].imagine}" class="imgAdmin"/>
+                    </div>
+                    <div class="numeAdmin">
+                        <a><span>${adminList[i].nume}</span></a>
+                    </div>
+                    <div class="pretAdmin">
+                        <span>${adminList[i].pret}</span>
+                    </div>
+                    <div class="stocAdmin">
+                        <span>${adminList[i].stoc}</span>
+                    </div>
+                    <div class="removeAdmin">
+                        <button onclick="showDiv(event)"; id="${i}">Remove</button>
+                    </div>
+                    <div class="editAdmin">
+                        <a href="edit.html?id=${i}"><button>Edit</button></a>
+                    </div>
+                </div>     
   
      `
     }
@@ -52,15 +53,15 @@ function showDiv(event){
     let itemId = item.id;
     let nameToDisplay = document.querySelector(`#numeProdus${itemId}`);
     nameToDisplay.textContent=adminList[itemId].nume;
-    let removePop = document.getElementById(`formular${itemId}`);
-    removePop.classList.remove("hidden");
+    document.querySelector("#dialogBox").classList.remove("hidden");
+    document.body.classList.add("overflowHidden")
     
 }
 async function confirmareStergere(event){
  let itemConfirmed= event.target;
  let idx=itemConfirmed.id;
- let removePop = document.getElementById(`formular${idx}`);
- removePop.classList.add("hidden");
+ document.querySelector("#dialogBox").classList.add("hidden");
+ document.body.classList.remove("overflowHidden")
  var response = await fetch(`https://final-project-corect.firebaseio.com/${idx}.json`,{
         method:"DELETE"
     });
@@ -68,8 +69,7 @@ async function confirmareStergere(event){
  
 }
 function refuzStergere(event){
-    let itemConfirmed= event.target;
-    let idx=itemConfirmed.id;
-    let removePop = document.getElementById(`formular${idx}`);
-    removePop.classList.add("hidden");
+    
+    document.querySelector("#dialogBox").classList.add("hidden");
+    document.body.classList.remove("overflowHidden")
 }

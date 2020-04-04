@@ -49,26 +49,25 @@ function drawDetails(){
  function addToCart(){
      
     let cant = Number(document.querySelector("#cantitate").value);
-    let stoc = detailList[index].stoc;
-    let name = detailList[index].nume;
-    let price= detailList[index].pret;
+    let stoc = detailList[index].stoc;  
     let url = detailList[index].imagine;
-    let pretCalc = cant* price;
+    let nume = detailList[index].nume;
+   
     
     
-    let listObjBuyed;
+    let cart;
       
         //array of objects
     
-        if(localStorage.getItem("listObjBuyed")===null){
-            listObjBuyed =[];
+        if(localStorage.getItem("cart")===null){
+            cart =[];
         }else{
-            listObjBuyed = JSON.parse(localStorage.getItem("listObjBuyed"));//transformarea string-ului din localstorage in array
+            cart = JSON.parse(localStorage.getItem("cart"));//transformarea string-ului din localstorage in array
          }
      let checker = false;
-         for(let i in listObjBuyed){
-                 if(listObjBuyed[i].id===index){
-                    let newCant= listObjBuyed[i].cantitate + cant;
+         for(let i in cart){
+                 if(cart[i].id===index){
+                    let newCant= cart[i].cantitate + cant;
                     if(newCant > stoc){
                         alert("Ati depasit stocul!");
                         checker=true;
@@ -76,15 +75,15 @@ function drawDetails(){
                      }
                     else{
             
-                        listObjBuyed[i].cantitate= newCant;
-                        localStorage.setItem("listObjBuyed", JSON.stringify(listObjBuyed));
+                        cart[i].cantitate= newCant;
+                        localStorage.setItem("cart", JSON.stringify(cart));
                         alert(""+name+ " a fost adaugat in cos");
                         checker=true;
                         
                     }          
                 }
             }
-            console.log(checker);
+            
          if(checker===false){
              if(cant>stoc){
                 alert("ati depasit stocul!")
@@ -94,17 +93,15 @@ function drawDetails(){
         
                  objBuyed={ 
                     "imagine": url,
-                    "nume": name,
-                    "pret": price,
                     "cantitate": cant,
                     "id": index,
+                    "nume": nume,
                     "stoc": stoc,
-                    "pretTotal":pretCalc
                 };
-                listObjBuyed.push(objBuyed);
+                cart.push(objBuyed);
         
-                localStorage.setItem("listObjBuyed", JSON.stringify(listObjBuyed));
-                alert(""+name+ " a fost adaugat in cos");
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert(""+nume+ " a fost adaugat in cos");
 
       
             }       

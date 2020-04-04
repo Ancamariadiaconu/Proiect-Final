@@ -465,12 +465,12 @@ h1{
 
 .imgDetails{	
 	object-fit: cover;
-	max-height:30vh;
+	max-height:40vh;
 	width: 100%;
 }
 .productDetails{
 	
-    width:90%; 
+    width:100%; 
 	font-size: 1.2rem;  
 	color: rgb(88,88,88);
 	font-family: "Work Sans",sans-serif;
@@ -546,26 +546,30 @@ h1{
 
 }
 @media all and (min-width: 1200px){
+	.owl-carousel{
+
+		width:60%;
+	}
 	.carouselButtons{
 
 		position: absolute;
 		top: 50%;
 		transform: translateX(-50%);
 		left: 50%;
-		z-index: 102;
-		width: 100%;
+		z-index: 98;
+		width: 60%;
 	}
 	.leftButton{
-		transform: translateX(-45px);
+		transform: translateX(-30px);
 
 	}
 	.rightButton{
-		transform: translateX(45px);
+		transform: translateX(30px);
 
 	}
 	.detailsContainerContent{
 
-		max-width: 777px;
+		max-width: 1000px;
 	}
 
 	.productDetailsWrap{
@@ -578,7 +582,7 @@ h1{
 	
 	.productDetails{
 	
-		width:auto;
+		width:40%;
 		
 	}
 	.productName{
@@ -588,8 +592,8 @@ h1{
 	}
 	.imgDetails{
 		margin-right:5rem; 
-		max-width:60vw;
-		max-height:60vh;
+		max-width:50%;
+		max-height:50%;
 
 	}
 	.adaugareCos{
@@ -836,7 +840,10 @@ h1{
 }
 .hidden{
 
-	display: none; 
+	display: none!important; 
+}
+.overflowHidden{
+	overflow:hidden;
 }
 a{
 
@@ -1014,24 +1021,7 @@ a:hover{
 	margin-top: 10px;
  }
  /*stiluri remove.html*/
- .stergereProdus{
-
-   width: 420px; 
-   padding: 30px;
-   border-radius: 5px;
-   box-shadow :10px 5px 5px grey; 
-   font-size: 20px;
-   font-weight: bold;
-   position: fixed;
-   top: 50%;
-   background-color: white;
-  
- }
  
- .hidden{
-
-	display: none; 
- }
  .confirmare, .refuz{
     
     color: white; 
@@ -1043,18 +1033,23 @@ a:hover{
 
 }
 .confirmare {
-    background-color: #2d81e0; 
+	background-color: #2d81e0; 
+	cursor:pointer;
+	
 }
 
 .refuz {
-    background-color:#DB7093; 
+	background-color:#DB7093; 
+	cursor: pointer;
 }
 
 #spinner {
 
 	position:absolute;
 	top:50%;
-	left:40%;
+	transform:translate(-50%);
+	left:50%;
+	
 }
 .owl-carousel{
 
@@ -1101,4 +1096,32 @@ a:hover{
 	font-size: 2rem;
 	cursor: pointer;
 }
+#dialogBox{
+
+	position: fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: rgba(0,0,0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+}
+.stergereProdus{
+
+	max-width: 420px; 
+	max-height: 200px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow :10px 5px 5px grey; 
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+	background-color: white;
+	z-index: 2;
+   
+  }
+
 
