@@ -5,9 +5,25 @@ let detailList={};
 async function getProductDetails(){
     let response = await fetch("https://final-project-corect.firebaseio.com/.json");
     detailList = await response.json();
+    drawProductsInCart();
     drawDetails();
     drawCarousel();
     setCarousel();
+}
+function drawProductsInCart(){
+
+    let nrOfProductsInCart=0;
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    let dinamicCartContent = document.querySelector(".dinamicCart");
+  
+  for(let i in cart){
+      nrOfProductsInCart+= cart[i].cantitate
+  }
+  if(nrOfProductsInCart!=0){
+  
+  dinamicCartContent.textContent = String(nrOfProductsInCart);
+  dinamicCartContent.classList.remove("hidden");
+  }
 }
 function drawDetails(){
     document.querySelector(".productDetailsWrap").classList.remove("hidden");
@@ -79,6 +95,7 @@ function drawDetails(){
                         localStorage.setItem("cart", JSON.stringify(cart));
                         alert(""+name+ " a fost adaugat in cos");
                         checker=true;
+                        drawProductsInCart(); 
                         
                     }          
                 }
@@ -102,10 +119,11 @@ function drawDetails(){
         
                 localStorage.setItem("cart", JSON.stringify(cart));
                 alert(""+nume+ " a fost adaugat in cos");
-
+                drawProductsInCart();
       
             }       
-        }        
+        } 
+            
 }
 function setCarousel(){
     let carouselContainer = $(".owl-carousel");
@@ -131,5 +149,6 @@ function setCarousel(){
         carouselContainer.trigger("next.owl.carousel")
     });
 }
+
 
 

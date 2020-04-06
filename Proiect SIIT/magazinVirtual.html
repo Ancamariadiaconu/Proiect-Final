@@ -14,7 +14,12 @@
         <div class="container">
             <h1>Paint Place</h1>
             <nav class="icons">
-                <a href="cart.html"><img src="cart.png" class="icon icon-cart"></a>
+                <input class="search hidden" type="text" onmouseleave="hideInput();">
+                <img src="search.png" class="icon icon-search" onclick="displayInput();">
+                <span class="cartContainer">
+                    <span class="dinamicCart hidden"></span>
+                    <a href="cart.html"><img src="cart.png" class="icon icon-cart"></a>
+                </span>
                 <a href="admin.html"><img src="admin.png" class="icon icon-admin"></a>
             </nav>
         </div>

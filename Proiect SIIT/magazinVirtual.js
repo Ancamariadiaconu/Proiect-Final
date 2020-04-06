@@ -2,9 +2,26 @@ let list={};
 async function getList(){
     let response = await fetch("https://final-project-corect.firebaseio.com/.json");
     list = await response.json();
+    drawProductsInCart();
     draw();
 }
+function drawProductsInCart(){
+
+    let nrOfProductsInCart=0;
+    let cart = JSON.parse(localStorage.getItem("cart"));
+    let dinamicCartContent = document.querySelector(".dinamicCart");
+  
+  for(let i in cart){
+      nrOfProductsInCart+= cart[i].cantitate
+  }
+  if(nrOfProductsInCart!=0){
+  
+  dinamicCartContent.textContent = String(nrOfProductsInCart);
+  dinamicCartContent.classList.remove("hidden");
+  }
+}
 function draw(){
+   
     document.querySelector(".showProducts").classList.remove("hidden");
     document.querySelector("#spinner").classList.add("hidden");
     let str="";
@@ -32,4 +49,12 @@ function draw(){
       }
       document.querySelector(".showProducts").innerHTML = str;
   }
+  function displayInput(){
+    document.querySelector(".search").classList.add("displayedInput");
+}
+function hideInput(){
+    document.querySelector(".search").classList.add("displayedInput");
+
+}
+
   

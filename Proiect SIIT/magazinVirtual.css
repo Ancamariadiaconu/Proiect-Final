@@ -301,12 +301,17 @@ h1{
 .icons{
 	text-align: center;
 	margin-right: 1rem;
+	
 
+}
+.cartContainer{
+
+	position: relative;
 }
 .icon{
 	height:20px;
 	width: 20px; 
-	margin-left: 0.5rem;
+	margin-left: 1rem;
 }
 
 
@@ -1122,6 +1127,38 @@ a:hover{
 	background-color: white;
 	z-index: 2;
    
+  }
+  .dinamicCart{
+	position: absolute;
+	top: -15px; 
+	left: 35px;
+    display: inline-block;
+	background:#fe2d34;
+	line-height: 18px;
+	font-size: 11px;
+    font-weight: bold;
+	text-align: center;
+	border-radius: 50%;
+	color: white; 
+	min-width: 18px;
+	height: 18px;
+	background-image: linear-gradient(to right, #cf3f50,#cf3f50,#fe2d34);	
+  }
+  .dinamicCartDetails{
+	left: 85px;
+
+  }
+  .search{
+	padding: 15px 20px 8px 60px;
+	border-radius: 20px;
+	border: 1px solid #E0E0E0;
+	 
+  }
+  .icon-search{
+	width: 23px;
+	height: 23px;
+	margin-left: -40px;
+	
   }
 
 
