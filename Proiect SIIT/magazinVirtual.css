@@ -254,7 +254,10 @@ table {
 		width: 8.33333333%;
 	}
 }
+#title:hover{
+	cursor: pointer; 
 
+}
 .image{
 
     background: url("https://paintingvalley.com/images/aqua-blue-painting-27.jpg") no-repeat center/cover;
@@ -301,8 +304,8 @@ h1{
 .icons{
 	text-align: center;
 	margin-right: 1rem;
+	padding-top: 21px; 
 	
-
 }
 .cartContainer{
 
@@ -386,7 +389,87 @@ h1{
 
 	margin-right:0.5rem;
   }
+ .showDesktop{
+	display: none;
+
+ }
+ .showMobile{
+	position:relative;
+	display: inline; 
+
+ }
+ .icon-search{
+	position: absolute;
+    right: 8px;
+    top: -2px;
+    width: 19px;
+    height: 19px;
+    z-index: 2;
+  }
+  .modalSearch{
+	position: fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:1; 
+	background-color: rgba(0,0,0,0.4);
+	opacity:0;
+  }
+  .modalContent{
+	height: 80px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  .modalInput{
+
+	height: 30px;
+	width: 70%; 
+  }
+  .showModalMobile{
+	opacity:1; 
+  }
+
   @media all and (min-width: 736px) {
+	.searchWrap{
+		position: relative; 
+		width: fit-content;
+		margin-bottom: 21px;
+        display: inline-block;	
+	}
+	.search{
+	  width: 22px;
+	  height: 35px;
+	  border-radius: 20px;
+	  border: 1px solid #E0E0E0;
+	  transition: width ease-in-out 0.5s;
+	  z-index:2; 
+	  opacity:0;
+	  position: sticky;
+	  cursor: pointer; 
+	  
+	}
+	.search:focus{
+		opacity:10; 
+		width:150px; 
+		cursor: auto;
+	}
+	.icon-search{
+		position: absolute;
+    	width: 28px;
+    	height: 27px;
+    	right: 5px;
+    	top: -1px;
+    	z-index: 1;
+	  }
+	
+	.showMobile{
+
+		display: none;
+	}
+
 
 	#cite{
 		
@@ -449,9 +532,7 @@ h1{
   .detailWraper{
 	min-height: 100vh;  
 	position: relative;
-	padding-bottom: 8vh;
-	background-color: #F5F5DC;	
-	
+	padding-bottom: 8vh;	
 }
   
  .detailsContainer{
@@ -707,13 +788,12 @@ h1{
 	font-size: 1rem;
 	color: #43484D;
 	font-weight: 300;
-	background-color: #F5F5DC;
+	background-color: white; 
 
 }
 .plus-btn, .minus-btn{
 	width: 1.5rem;
 	height: 1.5rem;
-	background-color: #E1E8EE;
   	border-radius: 10px;
   	border: none;
   	cursor: pointer;
@@ -728,7 +808,7 @@ h1{
 	color: #008B8B;
 	border:0;
 	margin:0;
-	background-color: #F5F5DC;;
+	background-color: white; 
 }
 .removeBtn:hover{
 
@@ -889,7 +969,6 @@ a:hover{
 	min-height: 100vh;  
 	position: relative;
 	padding-bottom: 8vh;
-	background-color: #F5F5DC;	
 	
 }
 .itemAdmin{
@@ -982,7 +1061,6 @@ a:hover{
 	min-height: 100vh;  
 	position: relative;
 	padding-bottom: 8vh;
-	background-color: #F5F5DC;	
 
 }
 .adaugareProdusNou{
@@ -1148,17 +1226,20 @@ a:hover{
 	left: 85px;
 
   }
-  .search{
-	padding: 15px 20px 8px 60px;
-	border-radius: 20px;
-	border: 1px solid #E0E0E0;
-	 
+  #toast{
+	position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 303px;
+    margin: 0 auto;
+    background-color: rgba(171, 183, 183, 0.9);
+    color: white;
+    font-size: 20px;
+    padding: 18px;
+    border-radius: 3px;
   }
-  .icon-search{
-	width: 23px;
-	height: 23px;
-	margin-left: -40px;
-	
-  }
-
+  
+  
+ 
 

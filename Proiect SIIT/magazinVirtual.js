@@ -21,11 +21,26 @@ function drawProductsInCart(){
   }
 }
 function draw(){
-   
+    let str="";
     document.querySelector(".showProducts").classList.remove("hidden");
     document.querySelector("#spinner").classList.add("hidden");
-    let str="";
+
+    let url = new URL(window.location.search, window.location);
+    let searchParams = url.searchParams;
+    let input = "";
+    
+        for(let [key,val] of searchParams){
+                console.log(key,val);
+                
+	            if(key==="id"){
+		        input=val;
+		        break;
+                }
+            }
+
+    let found = false;
     for(let i in list){
+        if(list[i].nume.toLowerCase().indexOf(input) > -1 || list[i].descriere.toLowerCase().indexOf(input) > -1){
           if(list[i]===null){
               continue;
           }
@@ -46,14 +61,52 @@ function draw(){
                 
             </div>
           `
-      }
+      
+    }
+    if(list[i].nume.toLowerCase().indexOf(input) !== -1 || list[i].descriere.toLowerCase().indexOf(input) !== -1) {
+        found = true;
+    }
+}
+if(input === ""){
+
+}else if(found === false){
+    
+   
+    document.querySelector(".message").classList.remove('hidden');
+    document.querySelector(".message").innerHTML = `Your search for "${input}" did not yield any results `;
+    
+    
+}else{
+    
+    document.querySelector(".message").classList.remove('hidden');
+    document.querySelector(".message").innerHTML = `Search results for "${input}"... `;
+    document.querySelector(".modalInput").value = "";
+    document.querySelector(".search").value = "";
+
+    }
       document.querySelector(".showProducts").innerHTML = str;
   }
-  function displayInput(){
-    document.querySelector(".search").classList.add("displayedInput");
+
+function showModalMobile(){
+ document.querySelector(".modalSearch").classList.add("showModalMobile");
+ document.querySelector(".icon-mobile").classList.add("hidden");
+
 }
-function hideInput(){
-    document.querySelector(".search").classList.add("displayedInput");
+function hideModal(){
+    document.querySelector(".modalSearch").classList.remove("showModalMobile");
+    document.querySelector(".icon-mobile").classList.remove("hidden");
+
+}
+function mobileSearch(){
+    let input = document.querySelector(".modalInput").value;
+    window.location = "magazinVirtual.html?id="+input;
+    return;
+
+}
+function desktopSearch(){
+    let input = document.querySelector(".search").value;
+    window.location = "magazinVirtual.html?id="+input;
+    return;
 
 }
 

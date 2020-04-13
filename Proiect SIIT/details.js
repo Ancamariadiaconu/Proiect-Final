@@ -60,7 +60,21 @@ function drawDetails(){
         
         
      }
+     async function wait(ms){
+        return new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                resolve()
+            },ms)
+        });
+    }
+  async function showToast(){
 
+    let toast = document.querySelector("#toast");
+    toast.classList.remove("hidden");
+
+    await wait(5000);
+    toast.classList.add("hidden");
+}
 
  function addToCart(){
      
@@ -93,7 +107,7 @@ function drawDetails(){
             
                         cart[i].cantitate= newCant;
                         localStorage.setItem("cart", JSON.stringify(cart));
-                        alert(""+name+ " a fost adaugat in cos");
+                        showToast();
                         checker=true;
                         drawProductsInCart(); 
                         
@@ -118,7 +132,7 @@ function drawDetails(){
                 cart.push(objBuyed);
         
                 localStorage.setItem("cart", JSON.stringify(cart));
-                alert(""+nume+ " a fost adaugat in cos");
+                showToast();
                 drawProductsInCart();
       
             }       

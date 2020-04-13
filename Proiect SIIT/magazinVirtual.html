@@ -12,10 +12,22 @@
     <body onload="getList();">
         <div class="wrappContent">         
         <div class="container">
-            <h1>Paint Place</h1>
+            <a href="magazinVirtual.html" id="title"><h1>Paint Place</h1></a>
             <nav class="icons">
-                <input class="search hidden" type="text" onmouseleave="hideInput();">
-                <img src="search.png" class="icon icon-search" onclick="displayInput();">
+                
+                <div class="showMobile">
+                    <div class="modalSearch">
+                        <div class="modalContent">
+                            <input class="modalInput" type="text" placeholder="search" onchange="mobileSearch();">
+                            <img src="removeSearch.svg" class="icon" onclick="hideModal();">
+                        </div>
+                    </div>
+                    <img src="search.png" class="icon icon-search icon-mobile" onclick="showModalMobile();">
+                 </div>
+                <span class="searchWrap showDesktop">
+                    <input class="search" type="text" placeholder="search" onchange="desktopSearch();">
+                    <img src="search.png" class="icon-search" onclick="desktopSearch();">
+                </span>
                 <span class="cartContainer">
                     <span class="dinamicCart hidden"></span>
                     <a href="cart.html"><img src="cart.png" class="icon icon-cart"></a>
@@ -28,6 +40,7 @@
                  <p id="cite"><cite>Of all lies, art is the least untrue</cite><span id="author"> - Gustave Flaubert</span></p>
             </div>
         </div>
+            <h2 class="message hidden"></h2>
             <div id="spinner"><img src="spinner.gif"></div> 
             <div class="showProducts"  class="hidden">
             
