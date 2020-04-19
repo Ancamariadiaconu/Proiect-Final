@@ -4,33 +4,31 @@
 		<title>Magazin virtual</title>
         <meta charset="UTF-8">
         <meta name=viewport content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="magazinVirtual.css">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster|Work+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="magazinVirtual.css">
         <script src="magazinVirtual.js"></script>
-    </head>
-    
+    </head>  
     <body onload="getList();">
         <div class="wrappContent">         
         <div class="container">
             <a href="magazinVirtual.html" id="title"><h1>Paint Place</h1></a>
             <nav class="icons">
-                
                 <div class="showMobile">
                     <div class="modalSearch">
                         <div class="modalContent">
                             <input class="modalInput" type="text" placeholder="search" onchange="mobileSearch();">
-                            <img src="removeSearch.svg" class="icon" onclick="hideModal();">
+                            <img src="removeSearch.svg" class="icon" onclick="hideModal();" alt="remove Icon">
                         </div>
                     </div>
-                    <img src="search.png" class="icon icon-search icon-mobile" onclick="showModalMobile();">
+                    <img src="search.png" class="icon icon-search icon-mobile" onclick="showModalMobile();" alt="seacrh Icon">
                  </div>
-                <span class="searchWrap showDesktop">
+                <div class="searchWrap showDesktop">
                     <input class="search" type="text" placeholder="search" onchange="desktopSearch();">
-                    <img src="search.png" class="icon-search" onclick="desktopSearch();">
-                </span>
+                    <img src="search.png" class="icon-search" onclick="desktopSearch();" alt="search Icon">
+                </div>
                 <span class="cartContainer">
                     <span class="dinamicCart hidden"></span>
-                    <a href="cart.html"><img src="cart.png" class="icon icon-cart"></a>
+                    <a href="cart.html"><img src="cart.png" class="icon icon-cart" alt="Cart"></a>
                 </span>
                 <a href="admin.html"><img src="admin.png" class="icon icon-admin"></a>
             </nav>
@@ -41,16 +39,14 @@
             </div>
         </div>
             <h2 class="message hidden"></h2>
-            <div id="spinner"><img src="spinner.gif"></div> 
-            <div class="showProducts"  class="hidden">
-            
-         
+            <div id="spinner"><img src="spinner.gif" alt="Loader"></div> 
+            <div class="showProducts hidden">
             </div>    
         <footer>
             <div class="social">
-                <img src="facebook.svg" class="socialIcon">
-                <img src="instagram.svg" class="socialIcon">
-                <img src="twitter.svg" class="socialIcon">
+                <img src="facebook.svg" class="socialIcon" alt="facebook">
+                <img src="instagram.svg" class="socialIcon" alt="instagram">
+                <img src="twitter.svg" class="socialIcon" alt="twitter">
             </div>
         </footer>
         </div>

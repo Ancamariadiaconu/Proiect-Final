@@ -85,7 +85,7 @@ if(input === ""){
 
     }
       document.querySelector(".showProducts").innerHTML = str;
-  }
+  } 
 
 function showModalMobile(){
  document.querySelector(".modalSearch").classList.add("showModalMobile");
