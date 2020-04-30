@@ -14,15 +14,16 @@ function draw(){
               continue;
           }
               
-          str+=`<div class="itemAdmin">
-                    <div id="dialogBox" class="hidden">
-                        <div class="stergereProdus" id="formular${i}">
-                            <p class="mesaj">Esti pe cale sa stergi produsul:"<span id="numeProdus${i}"></span>"</p>
-                            <p class="mesaj">Confirmi stergerea?</p>
-                            <button type="submit" class="confirmare" onclick="confirmareStergere(event);" id="${i}">DA</button>
-                            <button type="submit" class="refuz" onclick="refuzStergere(event);">NU</button>          
+          str+=`
+          <div class="itemAdmin">
+                        <div id="dialogBox" class="hidden remove${i}">
+                            <div class="stergereProdus">
+                                <p class="mesaj stergereElement${i}"></p>
+                                <p class="mesaj">Confirmi stergerea?</p>
+                                <button type="submit" class="confirmare" onclick="confirmareStergere(event);" id="${i}">DA</button>
+                                <button type="submit" class="refuz" onclick="refuzStergere(event);">NU</button>          
+                            </div>
                         </div>
-                    </div>
                     <div class="imagineAdmin">
                         <img src="${adminList[i].imagine}" class="imgAdmin"/>
                     </div>
@@ -51,15 +52,16 @@ function draw(){
 function showDiv(event){
     let item = event.target;
     let itemId = item.id;
-    let nameToDisplay = document.querySelector(`#numeProdus${itemId}`);
-    nameToDisplay.textContent=adminList[itemId].nume;
-    document.querySelector("#dialogBox").classList.remove("hidden");
+    document.querySelector(`.stergereElement${itemId}`).textContent=`Esti pe cale sa stergi produsul "${adminList[itemId].nume}"`;
+    document.querySelector(`.remove${itemId}`).classList.remove("hidden");
     document.body.classList.add("overflowHidden")
     
 }
 async function confirmareStergere(event){
- let itemConfirmed= event.target;
- let idx=itemConfirmed.id;
+ let itemConfirmed = event.target;
+ console.log(itemConfirmed)
+ let idx = itemConfirmed.id;
+    console.log(idx);
  document.querySelector("#dialogBox").classList.add("hidden");
  document.body.classList.remove("overflowHidden")
  var response = await fetch(`https://final-project-corect.firebaseio.com/${idx}.json`,{

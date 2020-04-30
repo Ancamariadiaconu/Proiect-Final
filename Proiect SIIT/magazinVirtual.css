@@ -301,6 +301,12 @@ table {
 	cursor: pointer; 
 
 }
+.message{
+	text-align: center;
+	font-size:30px; 
+	color: rgb(128,128,128); 
+	margin-top:40px; 
+}
 .image{
 
     background: url("https://paintingvalley.com/images/aqua-blue-painting-27.jpg") no-repeat center/cover;
@@ -448,7 +454,8 @@ h1{
 	  z-index:2; 
 	  opacity:0;
 	  position: sticky;
-	  cursor: pointer; 
+	  cursor: pointer;
+	  padding: 0px 8px; 
 	  
 	}
 	.search:focus{
@@ -962,6 +969,7 @@ a:hover{
 
 	display: flex;
 	flex-direction: column;
+	
 }
 
 .adminWraper{
