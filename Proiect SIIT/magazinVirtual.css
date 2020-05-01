@@ -456,6 +456,7 @@ h1{
 	  position: sticky;
 	  cursor: pointer;
 	  padding: 0px 8px; 
+	  margin-top:-1px;
 	  
 	}
 	.search:focus{
@@ -468,7 +469,7 @@ h1{
     	width: 28px;
     	height: 27px;
     	right: 5px;
-    	top: 2px;
+    	top: -1px;
     	z-index: 1;
 	  }
 	
