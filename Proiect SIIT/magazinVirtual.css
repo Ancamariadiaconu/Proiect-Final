@@ -282,11 +282,11 @@ table {
   }
  .icon-search{
 	position: absolute;
-    right: 8px;
-    top: -2px;
-    width: 19px;
-    height: 19px;
-    z-index: 2;
+    	right: 8px;
+    	top: -2px;
+    	width: 19px;
+   	height: 19px;
+    	z-index: 2;
   }
   .modalInput{
 
@@ -301,7 +301,7 @@ table {
 	cursor: pointer; 
 
 }
-.message{
+ .message{
 	text-align: center;
 	font-size:30px; 
 	color: rgb(128,128,128); 
@@ -309,8 +309,8 @@ table {
 }
 .image{
 
-    background: url("https://paintingvalley.com/images/aqua-blue-painting-27.jpg") no-repeat center/cover;
-    width: 100%;
+    	background: url("https://paintingvalley.com/images/aqua-blue-painting-27.jpg") no-repeat center/cover;
+   	width: 100%;
 	height: 20vh;	
 	display: table; 		
 }
@@ -345,7 +345,7 @@ a:hover{
 h1{
 	
 	margin-left: 0.6rem;
-    font-size: 1.5rem;
+    	font-size: 1.5rem;
 	font-family: 'Lobster', serif ;
 	color: 	rgb(128,128,128); 
 }
@@ -376,7 +376,7 @@ h1{
 
 .showProducts{
    
-    display: flex; 
+    	display: flex; 
 	flex-wrap:wrap;
 	text-align: center;
 	padding-bottom: 3rem;
@@ -426,7 +426,7 @@ h1{
   }
   
   .socialIcon{
-    margin-left: 1.5rem;
+    	margin-left: 1.5rem;
 	width:4vh;
 	height:4vh; 
 	
@@ -443,20 +443,20 @@ h1{
 		position: relative; 
 		width: fit-content;
 		margin-bottom: 21px;
-        display: inline-block; 	
+        	display: inline-block; 	
 	}
 	.search{
-	  width: 22px;
-	  height: 35px;
-	  border-radius: 20px;
-	  border: 1px solid #E0E0E0;
-	  transition: width ease-in-out 0.5s;
-	  z-index:2; 
-	  opacity:0;
-	  position: sticky;
-	  cursor: pointer;
-	  padding: 0px 8px; 
-	  margin-top:-1px;
+	  	width: 22px;
+	  	height: 35px;
+	  	border-radius: 20px;
+	  	border: 1px solid #E0E0E0;
+	  	transition: width ease-in-out 0.5s;
+	  	z-index:2; 
+	  	opacity:0;
+	  	position: sticky;
+	  	cursor: pointer;
+	  	padding: 0px 8px; 
+	  	margin-top:-1px;
 	  
 	}
 	.search:focus{
@@ -466,11 +466,11 @@ h1{
 	}
 	.icon-search{
 		position: absolute;
-    	width: 28px;
-    	height: 27px;
-    	right: 5px;
-    	top: -1px;
-    	z-index: 1;
+    		width: 28px;
+    		height: 27px;
+    		right: 5px;
+    		top: -1px;
+    		z-index: 1;
 	  }
 	
 	.showMobile{
@@ -493,12 +493,12 @@ h1{
 	}
 	h1{
 		margin-left: 1rem; 
-	    font-size: 2.5rem; 
+	   	 font-size: 2.5rem; 
 		
 	}
 	.imagineProdus{
 		margin-top: 5rem;
-	    margin-bottom: 0.625rem;
+	   	 margin-bottom: 0.625rem;
 		
 	}
 	.info{
@@ -523,12 +523,12 @@ h1{
   }
   
 .detailsContainerContent{
-  width:100%;
-  display: block;
-  margin: 0 auto;
-  padding: 3rem 2rem; 
-  box-sizing: border-box;
-  position: relative; 
+  	width:100%;
+  	display: block;
+  	margin: 0 auto;
+  	padding: 3rem 2rem; 
+  	box-sizing: border-box;
+  	position: relative; 
 
 }
 .owl-carousel{
@@ -564,7 +564,7 @@ h1{
 }
 .productDetails{
 	
-    width:100%; 
+    	width:100%; 
 	font-size: 1.2rem;  
 	color: rgb(88,88,88);
 	font-family: "Work Sans",sans-serif;
@@ -581,7 +581,7 @@ h1{
 }
 
 .description{
-    padding-top: 1rem; 
+   	padding-top: 1rem; 
 	border-top: 2px solid rgb(224,224,224, 0.6);
 	
 }
@@ -809,7 +809,7 @@ h1{
 }
 	button:focus,
 	input:focus {
-    outline:0;
+    	outline:0;
 }
 .removeBtn{
 
@@ -959,11 +959,11 @@ a:hover{
 	position: relative; 
 }
 .adauga{
- position: absolute; 
- top:0;
- right:0; 
- margin-top: 2rem; 
- margin-right: 4rem; 
+	 position: absolute; 
+ 	 top:0;
+	 right:0; 
+ 	 margin-top: 2rem; 
+ 	 margin-right: 4rem; 
 
 }
 .adminTable, .tableBody{
@@ -1091,14 +1091,14 @@ a:hover{
  }
  .addProdus {
 	display: inline-block; 
-    width: 150px; 
-    font-size: 20px; 
-    margin-bottom: 10px;
+    	width: 150px; 
+    	font-size: 20px; 
+    	margin-bottom: 10px;
  }
  .addProdusInput{
 
 	width: 420px; 
-    padding: 5px; 
+    	padding: 5px; 
  }
  .adaugare{
 
@@ -1116,12 +1116,12 @@ a:hover{
  
  .confirmare, .refuz{
     
-    color: white; 
-    border: none; 
-    border-radius: 5px; ;
-    padding: 10px; 
-    font-size: 15px; 
-    margin-top: 10px;
+    	color: white; 
+    	border: none; 
+    	border-radius: 5px; ;
+    	padding: 10px; 
+    	font-size: 15px; 
+    	margin-top: 10px;
 
 }
 .confirmare {
