@@ -957,19 +957,23 @@ a:hover{
 	border-top: 1px solid rgb(95, 158, 160, 0.8);
 	font-family: "Work Sans",sans-serif;
 	position: relative; 
+	max-width:100vw;
+		
+}
+.imagineAdmin, .headerImagineAdm{
+	display: none;
 }
 .adauga{
 	 position: absolute; 
  	 top:0;
-	 right:0; 
- 	 margin-top: 2rem; 
- 	 margin-right: 4rem; 
+	 margin-top:2rem;
 
 }
 .adminTable, .tableBody{
 
 	display: flex;
 	flex-direction: column;
+	max-width:100vw;
 	
 }
 
@@ -988,8 +992,6 @@ a:hover{
 }
 .imgAdmin{
 
-	max-width:210px;
-	max-height:210px; 
 	padding-bottom: 1rem;
 	padding-top: 1rem; 
 }	
@@ -1005,22 +1007,27 @@ a:hover{
 }
 .numeAdmin, .headerNumeAdm{
 
-	width: 400px; 
 	margin-left: 1rem; 
+	
 }
-.pretAdmin, .headerPretAdm{
+.editAdmin{
+	margin-right: 1rem;
+}
 
-	width: 100px; 
-	text-align: center;
-}
-.stocAdmin, .headerStocAdm{
+.pretAdmin, .headerPretAdm,.stocAdmin, .headerStocAdm, .headerNumeAdm, .numeAdmin{
 
-	width:60px; 
-	text-align: center;
+	width: 65px;
+	font-size:16px;
+	
 }
+.pretAdmin, .stocAdmin, .numeAdmin{
+	text-align:center;
+}
+
+
 .numeAdmin, .pretAdmin, .stocAdmin, .removeAdmin, .editAdmin{
 
-	padding-top: 2rem; 
+	padding: 1rem 0rem; 
 }
 .tableHeader{
 
@@ -1029,7 +1036,7 @@ a:hover{
 }
 .removeAdmin,.editAdmin{
 
-	margin-left: 1rem; 
+	margin-left: 0.3rem; 
 }
 .adminContent{
 
@@ -1037,10 +1044,10 @@ a:hover{
 }
 .editAdmin button, .removeAdmin button{
 
-	width: 5rem; 
+	width: 3.8rem; 
 	color: #008B8B;
 	border: 1px solid #5F9EA0;
-	padding: 0.3rem 1rem ;
+	padding: 0.3rem 0.5rem ;
 	border-radius: 5px; 
 }
 .editAdmin button:hover, .removeAdmin button:hover{
@@ -1067,6 +1074,7 @@ a:hover{
 }
 /*stiluri adaugaProdus.html*/
 .adaugaProdusWraper{
+	
 	min-height: 100vh;  
 	position: relative;
 	padding-bottom: 8vh;
@@ -1203,12 +1211,12 @@ a:hover{
 }
 .stergereProdus{
 
-	max-width: 420px; 
-	max-height: 200px;
+	max-width: 200px; 
+	max-height: 120px;
 	padding: 10px;
 	border-radius: 5px;
 	box-shadow :10px 5px 5px grey; 
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: bold;
 	position: relative;
 	background-color: white;
@@ -1248,7 +1256,78 @@ a:hover{
     padding: 18px;
     border-radius: 3px;
   }
-  
+  @media all and (min-width: 600px){
+	.imgAdmin{
+
+		max-width:210px;
+		max-height:210px; 
+		
+	}	
+	.adminContent{
+		
+		max-width:100vw;
+	}
+	
+	.adminTable, .tableBody{
+	
+		
+		max-width:100vw;
+		
+	}
+	.imagineAdmin, .headerImagineAdm{
+		display: block;
+	}
+	.numeAdmin, .headerNumeAdm{
+
+		width: 400px; 
+		margin-left: 1rem; 
+	}
+	.adauga{
+		position: absolute; 
+		 top:0;
+		right:0; 
+		 margin-top: 2rem; 
+		 margin-right: 4rem; 
+   
+   }
+   .pretAdmin, .headerPretAdm{
+
+	width: 100px; 
+	text-align: center;
+}
+	.stocAdmin, .headerStocAdm{
+     text-align: center;
+	 width:60px; 
+	}
+	.numeAdmin{
+		text-align: left;
+	}
+	.pretAdmin, .headerPretAdm,.stocAdmin, .headerStocAdm, .headerNumeAdm, .numeAdmin{
+		font-size:100%;
+	}
+	.removeAdmin,.editAdmin{
+
+		margin-left: 1rem; 
+	}
+	.editAdmin button, .removeAdmin button{
+
+		width: 5rem; 
+		padding: 0.3rem 1rem ;
+		 
+	}
+	.stergereProdus{
+
+		max-width: 420px; 
+		max-height: 200px;
+		font-size: 20px;
+		
+	   
+	  }
+	
+
+  }
+
+
   
  
 
