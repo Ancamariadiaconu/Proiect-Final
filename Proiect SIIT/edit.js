@@ -8,6 +8,7 @@ async function getProductEdit(){
     document.querySelector("[name='descriere']").value=list[idx].descriere;
     document.querySelector("[name='pret']").value=list[idx].pret;
     document.querySelector("[name='stoc']").value=list[idx].stoc;
+    console.log(idx);
 }
 async function editeazaProdus(){
 event.preventDefault();
